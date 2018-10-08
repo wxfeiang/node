@@ -4,13 +4,21 @@ var http = require('http')
 // 创建服务器方法  回调函数
 
 var server = http.createServer(function(req,res){
+   //  发送请求  fav.icon  是两种请求
+  // 客户端向服务器发送了请求 ........../
+//客户端向服务器发送了请求 ........../favicon.ico
+if(req.url !=='/favicon.ico'){
     console.log("客户端向服务器发送了请求 " +".........."+ req.url);
     // 设置相应头  返回纯文本
-    res.writeHead(200,{"Content-type":"text/plain"})
+    res.writeHead(200,{"Content-type":"text/plain"});
     res.end("server is working")
 
 
+}
+
+   
 })
+
 
 // 服务对象监听服务器地址,端口号
 server.listen(8888,"127.0.0.1")
