@@ -15,20 +15,18 @@ var fs = require('fs');
    
    if(req.url !== 'favicon.ico'){
        //  判断地址 跳不同的路由页面
-       if(req.url === '/' || req.url==='/index'){ // 跟路径
+       if(req.url === '/' || req.url ==='/index'){ // 跟路径
         res.writeHead(200,{"Content-type":"text/html"})
         fs.createReadStream(__dirname +'/index.html').pipe(res);
         
 
-       } else if(req.url === '/contsnt'){
+       } else if(req.url === '/contant'){
         res.writeHead(200,{"Content-type":"text/html"})
-        fs.createReadStream(__dirname +'/contant.html').pipe(res);
-
+        fs.createReadStream(__dirname +'/cantant.html').pipe(res);
 
        }else if(req.url === '/api/doc'){
         res.writeHead(200,{"Content-type":"text/html"})
         fs.createReadStream(__dirname +'/api/doc.html').pipe(res);
-
 
        }
 
