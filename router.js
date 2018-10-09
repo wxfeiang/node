@@ -12,7 +12,7 @@ var fs = require('fs');
 // 搭建服务器
  var server = http.createServer(function(req,res){
 
-   
+   console.log("test-nodemon")
    if(req.url !== 'favicon.ico'){
        //  判断地址 跳不同的路由页面
        if(req.url === '/' || req.url ==='/index'){ // 跟路径
