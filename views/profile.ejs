@@ -1,32 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>EJS文件</title>
     <style>
-        body{
+        body {
             background: skyblue;
             color: #fff;
 
         }
-        h1{
+
+        h1 {
             font: 30px;
             text-align: center;
-            
+
         }
-        p{
-            font: 20px;
-            text-align: center;
-            color: red;
+
+        p {
+            font: 30px;
+           
+           
         }
-    
-    
     </style>
 </head>
+
 <body>
     <h1>EJS</h1>
-    <p>这是<%= name %>文件 视图显示为Htm </p>
+    <p>这是
+        <%= websit %>
+        文件 视图显示为Htm </p>
+
+    <h2>单条传递数据测试  <%= data.name %> </h2>
+   
+    </ul>
+    <h2>多条数据遍历 显示</h2>
+
+    <ul>
+    <% data.forEach(function(item){ %>
+    
+     <li><%= item.name %></li>
+     <li><%= item.age %></li>
+
+
+
+
+    <% })%>
+  
+    </ul>
+
 </body>
+
 </html>
